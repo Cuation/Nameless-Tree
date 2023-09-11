@@ -31,7 +31,7 @@ var colors = {
 		locked: "#bf8f8f",
 		background: "#3a0505",
 		background_tooltip: "rgba(0, 0, 0, 0.75)",
-	}
+	},
 }
 function changeTheme() {
 
@@ -48,13 +48,13 @@ function getThemeName() {
 
 function switchTheme() {
 	let index = themes.indexOf(options.theme)
-	if (options.theme === null || index >= themes.length-1 || index < 1) {
+	if (options.theme === null || index >= themes.length-1 || index < 0) {
 		options.theme = themes[0];
 	}
 	else {
 		index ++;
 		options.theme = themes[index];
-		options.theme = themes[1];
+		//options.theme = themes[1];
 	}
 	changeTheme();
 	resizeCanvas();

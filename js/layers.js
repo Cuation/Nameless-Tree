@@ -6,7 +6,7 @@ addLayer("p", {
         unlocked: true,
 		points: new Decimal(0),
     }},
-    color: "#AAAAFF",
+    color: "#0099FF",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
     resource: "prestige points", // Name of prestige currency
     baseResource: "points", // Name of resource prestige is based on
@@ -41,14 +41,19 @@ addLayer("p", {
             cost: new Decimal(20),
         },
         21: {
-            title: "VROOM!",
-            description: "Increases point gain based on Prestige Points.",
+            title: "Prestige Points Are Useful Now!",
+            description: "Multiplies point gain based on Prestige Points.",
             cost: new Decimal(50),
             effect() {
                 return player[this.layer].points.add(1).pow(0.5)
             },
             effectDisplay() {return format(upgradeEffect(this.layer, this.id))+"x"},
         },
+        22: {
+            title: "Almost Time To Move On",
+            description: "Halves this layer's prestige requirement.",
+            cost: new Decimal(500),
+        }
     },
     layerShown(){return true}
 })
