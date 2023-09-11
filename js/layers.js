@@ -6,7 +6,7 @@ addLayer("p", {
         unlocked: true,
 		points: new Decimal(0),
     }},
-    color: "#00FF00",
+    color: "#0000FF",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
     resource: "prestige points", // Name of prestige currency
     baseResource: "points", // Name of resource prestige is based on
@@ -24,6 +24,15 @@ addLayer("p", {
     hotkeys: [
         {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
+    achievementPopups: true,
+    achievements: {
+        11: {
+            name: "It begins",
+            done() {return player.p.points(1)},
+            goalTooltip: "Get your first Prestige Point",
+            doneTooltip: "Got your first Prestige Point",
+        }
+    }
     upgrades: {
         11: {
             title: "Starting Slow",
