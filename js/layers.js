@@ -29,7 +29,12 @@ addLayer("p", {
             title: "Double Time",
             description: "Doubles point gain",
             cost: new Decimal(1),
-            },
+        },
+        12: {
+            title: "Double Double Time",
+            description: "Doubles point gain",
+            cost: new Decimal(15),
+        },
     },
     layerShown(){return true}
 })
