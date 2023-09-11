@@ -15,6 +15,8 @@ addLayer("p", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
+        let mult = new Decimal(1)
+        if (hasUpgrade('p', 22)) mult = mult.times(upgradeEffect('p', 22))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -53,6 +55,9 @@ addLayer("p", {
             title: "Almost Time To Move On",
             description: "Halves this layer's prestige requirement.",
             cost: new Decimal(500),
+            effect() {
+                return player.points.mult(1.5)
+            },
         }
     },
     layerShown(){return true}
