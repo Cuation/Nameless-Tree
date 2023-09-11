@@ -22,6 +22,16 @@ var colors = {
 		background: "#001f3f",
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
+	hellish: {
+		1: "#ff0a0a",
+		2: "#bf0a0a",
+		3: "#7f0a0a",
+		color: "#dfdfdf",
+		points: "#ffffff",
+		locked: "#bf8f8f",
+		background: "#3a0505",
+		background_tooltip: "rgba(0, 0, 0, 0.75)",
+	}
 }
 function changeTheme() {
 
