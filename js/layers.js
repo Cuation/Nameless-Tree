@@ -54,9 +54,6 @@ addLayer("p", {
             title: "Almost Time To Move On",
             description: "Halves this layer's prestige requirement.",
             cost: new Decimal(500),
-            effect() {
-                return player.points.mult(1.5)
-            },
         }
     },
     layerShown(){return true}
