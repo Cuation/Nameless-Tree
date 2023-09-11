@@ -31,10 +31,16 @@ addLayer("p", {
             cost: new Decimal(1),
         },
         12: {
-            title: "Double Double Time",
-            description: "Doubles point gain.",
+            title: "Double Time 2",
+            description: "Doubles point gain again, because it's still too slow",
             cost: new Decimal(10),
         },
+        13: {
+            title: "Double Time 3",
+            description: "Doubles point gain once more, as the last two weren't enough still.",
+            cost: new Decimal(20),
+
+        }
     },
     layerShown(){return true}
 })
