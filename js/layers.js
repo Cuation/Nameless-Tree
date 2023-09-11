@@ -32,15 +32,23 @@ addLayer("p", {
         },
         12: {
             title: "Double Time 2",
-            description: "Doubles point gain again, because it's still too slow",
+            description: "Doubles point gain again, because it's still too slow.",
             cost: new Decimal(10),
         },
         13: {
-            title: "Double Time 3",
-            description: "Doubles point gain once more, as the last two weren't enough still.",
+            title: "Triple Time",
+            description: "Triples point gain.",
             cost: new Decimal(20),
-
-        }
+        },
+        21: {
+            title: "VROOM!",
+            description: "Increases point gain based on Prestige Points.",
+            cost: new Decimal(50),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() {return format(upgradeEffect(this.layer, this.id))+"x"},
+        },
     },
     layerShown(){return true}
 })
