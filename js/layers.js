@@ -24,5 +24,12 @@ addLayer("p", {
     hotkeys: [
         {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
+    upgrades: {
+        11: {
+            title: "Starting Slow",
+            description: "Boosts point gain based on Prestige Points",
+            cost: new Decimal(10),
+            }
+    },
     layerShown(){return true}
 })
