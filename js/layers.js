@@ -24,19 +24,10 @@ addLayer("p", {
     hotkeys: [
         {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    achievementPopups: true,
-    achievements: {
-        11: {
-            name: "It begins",
-            done() {return player.p.points(1)},
-            goalTooltip: "Get your first Prestige Point",
-            doneTooltip: "Got your first Prestige Point",
-        }
-    }
     upgrades: {
         11: {
-            title: "Starting Slow",
-            description: "Boosts point gain based on Prestige Points",
+            title: "Double Time",
+            description: "Doubles point gain",
             cost: new Decimal(1),
             },
     },

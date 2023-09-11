@@ -17,10 +17,11 @@ let VERSION = {
 	name: "In The Beninging",
 }
 
-let changelog = `<h1>Changelog:</h1><br>
+let changelog = 
+	`<h1>Changelog:</h1><br>
 	<h3>v0.0</h3><br>
 		- Added things that makes the game function.<br>
-		- (I hope the so).`
+		- (I hope so).`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
 
@@ -43,6 +44,7 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
+	if (hasUpgrade('p', 11)) gain = gain.times(2)
 	return gain
 }
 
