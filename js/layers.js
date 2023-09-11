@@ -27,12 +27,12 @@ addLayer("p", {
     upgrades: {
         11: {
             title: "Double Time",
-            description: "Doubles point gain",
+            description: "Doubles point gain.",
             cost: new Decimal(1),
         },
         21: {
             title: "Double Double Time",
-            description: "Doubles point gain",
+            description: "Doubles point gain.",
             cost: new Decimal(10),
         },
     },
