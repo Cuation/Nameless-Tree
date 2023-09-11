@@ -29,7 +29,7 @@ addLayer("p", {
             title: "Starting Slow",
             description: "Boosts point gain based on Prestige Points",
             cost: new Decimal(1),
-            }
+            },
     },
     layerShown(){return true}
 })
